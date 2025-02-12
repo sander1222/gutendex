@@ -8,3 +8,7 @@
   justify-content: center;
   margin-top: -96px;
 }
+
+.bookshelf {
+  background-image: url(./public/shelf.png);
+}
