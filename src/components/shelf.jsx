@@ -12,8 +12,8 @@ function App() {
         {books.length > 0 ? (
           books.map((book, index) => (
             <div key={index} className="book">
-              <h3>{book.title}</h3>
-              <p>By: {book.authors?.map((author) => author.name).join(", ")}</p>
+              {/* <h3>{book.title}</h3> */}
+              {/* <p>By: {book.authors?.map((author) => author.name).join(", ")}</p> */}
               {book.formats["image/jpeg"] && (
                 <img src={book.formats["image/jpeg"]} alt={book.title} />
               )}

@@ -1,16 +1,16 @@
 .shelf,
 .topShelf {
   position: relative;
-  width: 100%; 
-  max-width: 1500px; 
-  margin: 0 auto; 
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
 }
 
 .topShelf {
   margin-top: -70px;
-  left: -15px; 
+  left: -15px;
 }
 
 .shelf {
@@ -19,11 +19,10 @@
 
 .shelf img,
 .topShelf img {
-  width: 100%; 
-  max-width: 750px; 
+  width: 100%;
+  max-width: 750px;
   height: auto;
 }
-
 
 @media (max-width: 768px) {
   .shelf img,
@@ -35,4 +34,11 @@
 
 .bookshelf {
   background-image: url(./public/shelf.png);
+  background-repeat: no-repeat;
+  position: relative;
+  width: 70%;
+  max-width: 1500px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
 }
