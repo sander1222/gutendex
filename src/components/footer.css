@@ -2,5 +2,6 @@
   display: flex;
   justify-content: center;
   transform: scale(1.6);
-  width: 1450px;
+  width: 1520px;
+  margin-top: -45px;
 }

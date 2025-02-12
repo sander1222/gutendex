@@ -1,0 +1,10 @@
+.shelf {
+  display: flex;
+  justify-content: center;
+}
+
+.topShelf {
+  display: flex;
+  justify-content: center;
+  margin-top: -96px;
+}
