@@ -35,10 +35,33 @@
 .bookshelf {
   background-image: url(./public/shelf.png);
   background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
   position: relative;
   width: 70%;
   max-width: 1500px;
+  height: 400px; /* Adjust based on the image size */
   margin: 0 auto;
   display: flex;
   justify-content: center;
+  align-items: flex-end; /* Align books to the bottom of the shelf */
+  flex-wrap: wrap; /* Allow books to wrap properly */
+  padding: 20px;
+}
+
+.book {
+  width: 120px; /* Adjust book width */
+  height: 180px; /* Adjust book height */
+  margin: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.book img {
+  width: 100%;
+  height: 100%;
 }
