@@ -1,6 +1,25 @@
 .top {
+  position: relative; /* Allows absolute positioning for the search bar */
+  width: 1480px;
+  margin: 45px;
   display: flex;
   justify-content: center;
-  margin: 45px;
-  width: 1480px;
+  align-items: center;
+}
+
+.top img {
+  height: auto;
+}
+
+.search-bar {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20%;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.8);
 }
