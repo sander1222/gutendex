@@ -1,7 +1,27 @@
 .bottom {
+  position: relative;
+  width: 100%; 
+  max-width: 1520px; 
+  margin: 0 auto; 
+  margin-top: -110px;
   display: flex;
   justify-content: center;
-  transform: scale(1.6);
-  width: 1520px;
-  margin-top: -45px;
+  left: -30px; 
+}
+
+.bottom img {
+  width: 100%; 
+  max-width: 1000px;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .bottom {
+    width: 100%;
+  }
+
+  .bottom img {
+    width: 100%;
+    max-width: 1520px;
+  }
 }

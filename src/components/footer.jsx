@@ -3,9 +3,9 @@ import "./footer.css";
 function Footer() {
   return (
     <>
-      <footer className="bottom">
+      <div className="bottom">
         <img src="/public/Legs.png" alt="" />
-      </footer>
+      </div>
     </>
   );
 }
