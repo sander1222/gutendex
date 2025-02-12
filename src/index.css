@@ -6,8 +6,8 @@
 
 body {
   background-image: url(/public/Babel.png);
-  background-size: cover;
-  width: max-content;
+  background-size: cover; /* Ensure it covers the screen */
   background-repeat: no-repeat;
   background-position: center center;
+  height: 100vh; /* Make sure it covers the full viewport height */
 }
