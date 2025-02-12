@@ -1,49 +1,30 @@
+import { useState } from "react";
+import BookList from "../App.jsx";
 import "./shelf.css";
 
-function Shelf() {
+function App() {
+  const [books, setBooks] = useState([]);
+
   return (
-    <>
-      <div className="topShelf">
-        <img src="/public/shelf.png" alt="" />
+    <div>
+      <BookList setBooks={setBooks} />
+      <div className="bookshelf">
+        {books.length > 0 ? (
+          books.map((book, index) => (
+            <div key={index} className="book">
+              <h3>{book.title}</h3>
+              <p>By: {book.authors?.map((author) => author.name).join(", ")}</p>
+              {book.formats["image/jpeg"] && (
+                <img src={book.formats["image/jpeg"]} alt={book.title} />
+              )}
+            </div>
+          ))
+        ) : (
+          <p>Loading books...</p>
+        )}
       </div>
-      <div className="shelf">
-        <img src="/public/shelf.png" alt="" />
-      </div>
-      <div className="shelf">
-        <img src="/public/shelf.png" alt="" />
-      </div>
-      <div className="shelf">
-        <img src="/public/shelf.png" alt="" />
-      </div>
-      <div className="shelf">
-        <img src="/public/shelf.png" alt="" />
-      </div>
-      <div className="shelf">
-        <img src="/public/shelf.png" alt="" />
-      </div>
-      <div className="shelf">
-        <img src="/public/shelf.png" alt="" />
-      </div>
-      <div className="shelf">
-        <img src="/public/shelf.png" alt="" />
-      </div>
-      <div className="shelf">
-        <img src="/public/shelf.png" alt="" />
-      </div>
-      <div className="shelf">
-        <img src="/public/shelf.png" alt="" />
-      </div>
-      <div className="shelf">
-        <img src="/public/shelf.png" alt="" />
-      </div>
-      <div className="shelf">
-        <img src="/public/shelf.png" alt="" />
-      </div>
-      <div className="shelf">
-        <img src="/public/shelf.png" alt="" />
-      </div>
-    </>
+    </div>
   );
 }
 
-export default Shelf;
+export default App;
