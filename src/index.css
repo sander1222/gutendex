@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
 body {
   background-image: url(/public/Babel.jpg);
   background-size: cover; /* Make the image cover the entire page */
