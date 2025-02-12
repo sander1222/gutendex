@@ -5,10 +5,9 @@
 }
 
 body {
-  background-image: url(/public/Babel.jpg);
-  background-size: cover; /* Make the image cover the entire page */
-  background-repeat: no-repeat; /* Prevent repetition of the image */
-  background-position: center center; /* Center the image */
-  background-attachment: fixed; /* Keep the background fixed during scrolling */
-  height: 100vh; /* Ensure the body takes the full height of the viewport */
+  background-image: url(/public/Babel.png);
+  background-size: cover;
+  width: max-content;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
