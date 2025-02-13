@@ -23,10 +23,9 @@
   align-items: flex-end;
   flex-wrap: wrap;
   padding: 20px;
-  background-color: #7f4014; /* Wood color to match */
-  border: 2px solid #5c3a22; /* Matching border */
+  background-color: #5c3a22; /* Wood color to match */
+  border: 20px solid #7f4014; /* Matching border */
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .book {
