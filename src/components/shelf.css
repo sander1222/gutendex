@@ -30,8 +30,8 @@
   align-items: flex-end;
   flex-wrap: wrap;
   padding: 20px;
-  background-color: #7f4014;
-  border: 2px solid #5c3a22;
+  background-color: #5c3a22;
+  border: 20px solid #7f4014;
   border-radius: 10px;
 }
 
