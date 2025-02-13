@@ -3,6 +3,7 @@
   width: 100%; /* Make it flexible */
   max-width: 1480px; /* Keep the original max-width */
   margin: 0 auto; /* Center the header */
+  margin-bottom: -70px; /* Ensure no space below the header */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -33,6 +34,7 @@
 @media (max-width: 768px) {
   .top {
     width: 100%;
+    margin-bottom: 0; /* Remove bottom margin on smaller screens as well */
   }
 
   .top img {
