@@ -1,17 +1,17 @@
 .top {
   position: relative;
-  width: 100%; /* Make it flexible */
-  max-width: 1480px; /* Keep the original max-width */
-  margin: 0 auto; /* Center the header */
-  margin-bottom: -70px; /* Ensure no space below the header */
+  width: 100%; 
+  max-width: 1480px; 
+  margin: 0 auto; 
+  margin-bottom: -70px; 
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .top img {
-  width: 100%; /* Make the image flexible */
-  max-width: 1000px; /* Fixed size */
+  width: 100%; 
+  max-width: 1000px; 
   height: auto;
 }
 
@@ -20,9 +20,9 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 20%; /* Smaller width */
-  max-width: 300px; /* Cap the search bar */
-  min-width: 150px; /* Ensure it doesn’t shrink too much */
+  width: 20%; 
+  max-width: 300px; 
+  min-width: 150px; 
   padding: 8px;
   font-size: 16px;
   border: 1px solid #ccc;
@@ -30,11 +30,11 @@
   background-color: rgba(255, 255, 255, 0.8);
 }
 
-/* Responsive adjustments */
+
 @media (max-width: 768px) {
   .top {
     width: 100%;
-    margin-bottom: 0; /* Remove bottom margin on smaller screens as well */
+    margin-bottom: 0; 
   }
 
   .top img {
