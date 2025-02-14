@@ -1,4 +1,7 @@
-import { useEffect, useState } from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { useState, useEffect } from "react";
+import BookList from "./components/bok.jsx"; // Import your BookList component
+import Bok from "./Bok.jsx"; // Import your Bok component for the individual book page
 
 const categories = [
   "Fiction",
@@ -16,39 +19,31 @@ const categories = [
   "Philosophy",
 ];
 
-export default function BookList({ setBooks }) {
+export default function App() {
+  const [books, setBooks] = useState([]);
   const [category, setCategory] = useState("Fiction");
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
 
   useEffect(() => {
-    console.log(`Fetching books for category: ${category}, page: ${page}`);
-
     fetch(`https://gutendex.com/books/?topic=${category}&page=${page}`)
       .then((res) => res.json())
       .then((data) => {
-        console.log("API response:", data);
-        setBooks(data.results || []); // Update books in App.jsx
+        setBooks(data.results || []);
         setTotalPages(Math.ceil((data.count || 1) / 10));
       })
       .catch((error) => console.error("Error fetching books:", error));
-  }, [category, page, setBooks]);
+  }, [category, page]);
 
   return (
-    <div>
-      {/* <select onChange={(e) => setCategory(e.target.value)} value={category}>
-        {categories.map((cat) => (
-          <option key={cat} value={cat}>
-            {cat}
-          </option>
-        ))}
-      </select>
-      <button disabled={page === 1} onClick={() => setPage(page - 1)}>
-        Prev
-      </button>
-      <button disabled={page === totalPages} onClick={() => setPage(page + 1)}>
-        Next
-      </button> */}
-    </div>
+    <Router>
+      <Routes>
+        <Route
+          path="/"
+          element={<BookList books={books} setBooks={setBooks} />}
+        />
+        <Route path="/book/:id" element={<Bok />} />
+      </Routes>
+    </Router>
   );
 }
